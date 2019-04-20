@@ -8,7 +8,7 @@ class Scraper
     html = open(index_url)
     list = Nokogiri::HTML
     
-    students = []
+    student_array = []
     
     
   end
