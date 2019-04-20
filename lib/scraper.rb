@@ -3,6 +3,8 @@ require 'pry'
 require 'nokogiri'
 
 class Scraper
+  
+  index_url = "./fixtures/student-site/index.html"
 
   def self.scrape_index_page(index_url)
     html = open(index_url)
