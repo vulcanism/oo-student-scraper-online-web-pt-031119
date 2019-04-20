@@ -10,7 +10,13 @@ class Scraper
     
     student_array = []
     
-    
+    list.css(".student-card a").each do |student|
+      student_hash = {
+        :name => student.css(".student-name").text,
+        :location => student.css(".student-location").text,
+        :profile_url => student.attribute("href").value}
+        student_array << student_hash
+      end
   end
 
   def self.scrape_profile_page(profile_url)
