@@ -39,6 +39,11 @@ class Scraper
         student_hash[:blog] = link
     end
   end
+  
+  student_hash[:profile_quote] = profiles.css(".profile-quote").text if profiles.css(".profile-quote")
+    student_hash[:bio] = profiles.css(".description-holder p").text if profiles.css(".description-holder p")
+    student_hash
+  end
 
 end
 
